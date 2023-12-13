@@ -2,8 +2,9 @@ import { Button, TextInput } from "react-native-paper";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
-import { LoginScreen } from "./src/screens/LoginScreen";
-import { TermsScreen } from "./src/screens/TermsScreen";
+import { LoginScreen } from "~/screens/LoginScreen";
+import { TermsScreen  } from "~/screens/TermsScreen";
+import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
 
 // You can import supported modules from npm
 //import { Card } from 'react-native-paper';
@@ -15,7 +16,8 @@ export default function App() {
   return (
     <PaperProvider>
         {/* <LoginScreen /> */}
-        <TermsScreen />
+        {/* <TermsScreen /> */}
+        <StarshipFeedScreen />
     </PaperProvider>
   );
 }

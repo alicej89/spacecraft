@@ -1,8 +1,8 @@
 import { Button, TextInput } from "react-native-paper";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { FormInput } from "../components/FormInput";
-import { Header } from "../components/Header";
+import { FormInput } from "~/components/FormInput";
+import { Header } from "~/components/Header";
 
 // You can import supported modules from npm
 //import { Card } from 'react-native-paper';
