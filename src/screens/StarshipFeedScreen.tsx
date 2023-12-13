@@ -3,6 +3,9 @@ import { StyleSheet, StatusBar, View, Text, FlatList } from "react-native";
 import { Card } from "react-native-paper";
 
 import { default as data } from "~/../api/data.json";
+import { useStarships } from "~/hooks/useStarships";
+
+const {data, error, status} = useStarships();
 
 type ItemProps = {
     title: string,
@@ -28,6 +31,7 @@ const RenderItem = ({title, crew, model, hyperdrive, cost}: ItemProps) => (
 );
 
 export const StarshipFeedScreen = () => {
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
