@@ -1,11 +1,9 @@
-import { Text } from 'react-native';
+import { Text } from "react-native";
 
 type Title = {
-    titleLabel: string;
-  };
+  titleLabel: string;
+};
 
 export function Header(props: Title) {
-  return (
-    <Text>{ props.titleLabel } for React Native</Text>
-  );
+  return <Text>{props.titleLabel} for React Native</Text>;
 }

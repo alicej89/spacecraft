@@ -7,5 +7,5 @@ async function fetchData() {
 }
 
 export function useStarships() {
-  return useQuery({queryKey: ["starships"], queryFn: fetchData});
+  return useQuery({ queryKey: ["starships"], queryFn: fetchData });
 }

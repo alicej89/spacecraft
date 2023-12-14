@@ -1,5 +1,11 @@
 import { Button, TextInput } from "react-native-paper";
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 
 import { FormInput } from "~/components/FormInput";
 import { Header } from "~/components/Header";
@@ -26,11 +32,7 @@ export function LoginScreen() {
         <FormInput
           label="Password"
           autoComplete="password"
-          right={
-            <TextInput.Icon
-              icon="eye-off"
-            />
-          }
+          right={<TextInput.Icon icon="eye-off" />}
         />
         <Button
           style={styles.submitButton}
@@ -43,17 +45,17 @@ export function LoginScreen() {
             by login you accept the Terms and Conditions.
           </Text>
         </TouchableOpacity>
-      </View> 
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   header: {
-    justifyContent: 'center',
+    justifyContent: "center",
     backgroundColor: "purple",
     height: "40%"
   },
@@ -61,19 +63,19 @@ const styles = StyleSheet.create({
     color: "white",
     margin: 24,
     fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center"
   },
   content: {
-    padding: 16,
+    padding: 16
   },
   submitButton: {
     marginVertical: 32,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
   tocText: {
     textAlign: "center",
     fontSize: 14,
-    color: "#9CA3AF",
-  },
+    color: "#9CA3AF"
+  }
 });
