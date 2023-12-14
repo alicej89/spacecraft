@@ -8,12 +8,6 @@ import { LoginScreen } from "~/screens/LoginScreen";
 import { TermsScreen  } from "~/screens/TermsScreen";
 import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
 
-// You can import supported modules from npm
-//import { Card } from 'react-native-paper';
-
-// or any files within the Snack
-//import AssetExample from './components/AssetExample';
-
 const queryClient = new QueryClient()
 
 export default function App() {
