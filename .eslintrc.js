@@ -42,7 +42,7 @@ module.exports = {
         ]
       }
     ],
-    "camelcase": "off", // disable camelcase rule
+    camelcase: "off", // disable camelcase rule
     "@typescript-eslint/no-explicit-any": "warn" // detect usage of `any` type
   }
 };

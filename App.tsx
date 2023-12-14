@@ -16,14 +16,17 @@ import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
 
 const queryClient = new QueryClient();
 
-export default function App() {
+/* export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <PaperProvider>
-        {/* <LoginScreen /> */}
-        {/* <TermsScreen /> */}
+        <LoginScreen />
+        <TermsScreen />
         <StarshipFeedScreen />
       </PaperProvider>
     </QueryClientProvider>
   );
-}
+} */
+
+// Storybook
+export { default } from "./.storybook";
