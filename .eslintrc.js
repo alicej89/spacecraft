@@ -8,6 +8,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:prettier/recommended",
     "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
@@ -42,7 +43,7 @@ module.exports = {
         ]
       }
     ],
-    "camelcase": "off", // disable camelcase rule
+    camelcase: "off", // disable camelcase rule
     "@typescript-eslint/no-explicit-any": "warn" // detect usage of `any` type
   }
 };
