@@ -1,43 +1,36 @@
 import React from "react";
 import { StyleSheet, StatusBar, View, Text, FlatList } from "react-native";
-import { Card } from "react-native-paper";
+import { Button } from "react-native-paper";
+import { CardItem } from "~/components/CardItem";
 
-import { default as data } from "~/../api/data.json";
+// import { default as data } from "~/../api/data.json";
 import { useStarships } from "~/hooks/useStarships";
 
-const {data, error, status} = useStarships();
-
-type ItemProps = {
-    title: string,
-    crew: string,
-    model: string,
-    hyperdrive: string,
-    cost: string
-};
-
-const RenderItem = ({title, crew, model, hyperdrive, cost}: ItemProps) => (
-  <>
-    <Card>
-        <Card.Title title={title} />
-        <Card.Cover source={{ uri: 'https://picsum.photos/seed/car/400/200' }} />
-        <Card.Content>
-            <Text >{crew}</Text>
-            <Text >{model}</Text>
-            <Text >{hyperdrive}</Text>
-            <Text >{cost}</Text>
-        </Card.Content>
-    </Card>
-  </>
-);
 
 export const StarshipFeedScreen = () => {
+  const {data, failureReason,  error, status} = useStarships();
+  
+  if (status === 'pending') {
+    return <Text>Loading...</Text>
+  }
+  
+  if (status === 'error') {
+    return (
+      <View style={{flex:1, alignItems: "center", justifyContent: "center"}}>
+        <Text>Error...</Text>
+        <Text>{JSON.stringify(error)}</Text>
+        <Text>{JSON.stringify(failureReason)}</Text>
+        <Button>Send an email to the support</Button>
+      </View>
+    )
+  }
 
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
       <FlatList
         data={data.results}
-        renderItem={({item}) => <RenderItem title={item.name} crew={item.crew} model={item.model} hyperdrive={item.hyperdrive_rating} cost={item.cost_in_credits}/>}
+        renderItem={({item}) => <CardItem title={item.name} crew={item.crew} model={item.model} hyperdrive={item.hyperdrive_rating} cost={item.cost_in_credits}/>}
       />
       </View>
     </View>
